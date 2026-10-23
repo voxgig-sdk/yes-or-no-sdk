@@ -1,0 +1,28 @@
+# BasicOracleFlow
+
+main: kit: flow: BasicOracleFlow:
+{
+  entity: "oracle",
+  kind: "basic",
+  name: "BasicOracleFlow",
+  step: [
+    {
+      i: {
+        ref: "oracle_ref01",
+        srcdatavar: "oracle_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-oracle_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicOracleFlow"
+}

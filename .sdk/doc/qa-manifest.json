@@ -1,0 +1,18 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "A random answer",
+      "Normalized answer.",
+      "Random yes/no/maybe answers in themed oracle voices from yesnooracle.app. Knowledge source: the documentation page https://yesnooracle.app/api and live GET probes on 2026-10-23 (every tool, the force parameter, and an invalid tool). Corrections to the docs from the probes: a maybe answer carries verdict &#39;again&#39;, not &#39;maybe&#39;; the server also accepts the undocumented tool &#39;wheel&#39;; an unknown tool returns HTTP 400 with an error message and the list of valid tools; an unknown force value is ignored. Answers are random, so any single call&#39;s word, phrase and answer will differ. The docs state a soft per-IP rate limit of about 60 requests per minute (not tested).",
+      "The tool that answered.",
+      "Themed reflective sentence.",
+      "True when the verdict was set with the force parameter.",
+      "URL of the tool&#39;s artwork."
+    ]
+  }
+}

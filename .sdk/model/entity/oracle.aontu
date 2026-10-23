@@ -1,0 +1,115 @@
+# Entity: oracle
+
+main: kit: entity: oracle: {
+
+  alias: field: {}
+
+  fields: {
+    answer: {
+      h: "Answer"
+      n: "answer"
+      r: true
+      sh: "Normalized answer."
+      t: "`$STRING`"
+    }
+    forced: {
+      h: "Forced"
+      n: "forced"
+      r: true
+      sh: "True when the verdict was set with the force parameter."
+      t: "`$BOOLEAN`"
+    }
+    image: {
+      h: "Image"
+      n: "image"
+      r: true
+      sh: "URL of the tool's artwork."
+      t: "`$STRING`"
+    }
+    phrase: {
+      h: "Phrase"
+      n: "phrase"
+      r: true
+      sh: "Themed reflective sentence."
+      t: "`$STRING`"
+    }
+    tool: {
+      h: "Tool"
+      n: "tool"
+      r: true
+      sh: "The tool that answered."
+      t: "`$STRING`"
+    }
+    verdict: {
+      h: "Verdict"
+      n: "verdict"
+      r: true
+      sh: "Verdict label: 'yes' or 'no' matching answer, or 'again' when answer is 'maybe'."
+      t: "`$STRING`"
+    }
+    word: {
+      h: "Word"
+      n: "word"
+      r: true
+      sh: "Themed headline, e.g."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "oracle"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/oracle"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "yes"
+                k: "query"
+                n: "force"
+                or: "force"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "tarot"
+                k: "query"
+                n: "tool"
+                or: "tool"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/oracle"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "oracle"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

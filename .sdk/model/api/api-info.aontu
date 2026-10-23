@@ -1,0 +1,21 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      description: "Random yes/no/maybe answers in themed oracle voices from yesnooracle.app. Knowledge source: the documentation page https://yesnooracle.app/api and live GET probes on 2026-10-23 (every tool, the force parameter, and an invalid tool). Corrections to the docs from the probes: a maybe answer carries verdict 'again', not 'maybe'; the server also accepts the undocumented tool 'wheel'; an unknown tool returns HTTP 400 with an error message and the list of valid tools; an unknown force value is ignored. Answers are random, so any single call's word, phrase and answer will differ. The docs state a soft per-IP rate limit of about 60 requests per minute (not tested)."
+      servers: [
+        {
+          url: "https://yesnooracle.app"
+        }
+      ]
+      summary: "Random yes/no/maybe answers in themed oracle voices from yesnooracle.app."
+      title: "Yes or No API"
+      version: "1.0.0"
+      website: "https://yesnooracle.app"
+    }
+  }
+}
+

@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "oracle": {
+      "ORACLE00": {
+        "answer": "s46",
+        "forced": false,
+        "image": "s48",
+        "phrase": "s49",
+        "tool": "s4a",
+        "verdict": "s4b",
+        "word": "s4c",
+        "id": "ORACLE00"
+      },
+      "ORACLE01": {
+        "answer": "s8c",
+        "forced": false,
+        "image": "s8e",
+        "phrase": "s8f",
+        "tool": "s90",
+        "verdict": "s91",
+        "word": "s92",
+        "id": "ORACLE01"
+      },
+      "ORACLE02": {
+        "answer": "sd2",
+        "forced": false,
+        "image": "sd4",
+        "phrase": "sd5",
+        "tool": "sd6",
+        "verdict": "sd7",
+        "word": "sd8",
+        "id": "ORACLE02"
+      }
+    }
+  },
+  "new": {
+    "oracle": {
+      "oracle_ref01": {
+        "answer": "s118",
+        "forced": false,
+        "image": "s11a",
+        "phrase": "s11b",
+        "tool": "s11c",
+        "verdict": "s11d",
+        "word": "s11e"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/oracle": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}
